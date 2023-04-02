@@ -144,19 +144,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
         document.querySelector("#ability1").textContent = `${ability1}`;
         document.querySelector("#ability2").textContent = `${ability2}`;
     }
-    
-    
-    
-    // let ability1 = pokemon.abilities[0].ability.name;
-    // ability1 = ability1[0].toUpperCase() + ability1.slice(1);
-
-    // // let ability2 = pokemon.abilities[1].ability.name;
-    // // ability2 = ability2[0].toUpperCase() + ability2.slice(1);
-
-    // document.querySelector("#ability1").textContent = `${ability1}`;
-    // // document.querySelector("#ability2").textContent = `${ability2}`;
-
-
 
     // Moves
 
