@@ -13,12 +13,18 @@
 <body>
     <header>
         <h1>Onyx's Pokedex</h1>
+        <!-- <h1>Onyx's Pokedex</h1> -->
         <p>Welcome to my Pokedex! Here you'll find an informational guide on each individual Pokemon.</p>
         <form class="search">
             <input type="text" name="userinput" id="searchbar" placeholder="Type in a Pokemon's name"/>
             <input class ="button" type="submit" value="Enter"/>
+            <a href="./index2.html" target="_blank"><p style="font-size:medium">Purpose of this website?</p></a>
         </form>
     </header>
+
+    <div class="error hidden">
+        <p></p>
+    </div>
 
     <main class="hidden">
         <div id="div1">
@@ -29,7 +35,7 @@
                 <span id="type1"></span>
                 <span id="type2"></span>
             </p>
-            <img>
+            <img id="img">
             <p>
                 <span id="height"></span>
                 <span id="weight"></span>
