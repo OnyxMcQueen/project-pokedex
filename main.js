@@ -13,6 +13,14 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
     let main = document.querySelector("main");
     main.classList.remove("hidden");
 
+    // Hiding error message so it doesn't randomly show up when searches are successful
+
+    if(!document.querySelector(".error").classList.contains("hidden")){
+    
+        document.querySelector(".error").classList.add("hidden");
+    
+    }
+
     // Pokemon Description
 
     let name = userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
@@ -146,28 +154,69 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
 
     document.querySelector(".moves h2").textContent = `MoveSet`;
 
-    let mv1 = pokemon.moves[0].move.name;
-    mv1 = mv1[0].toUpperCase() + mv1.slice(1);
+    if(pokemon.moves.length === 1){
+        let mv1 = pokemon.moves[0].move.name;
+        mv1 = mv1[0].toUpperCase() + mv1.slice(1);
 
-    let mv2 = pokemon.moves[1].move.name;
-    mv2 = mv2[0].toUpperCase() + mv2.slice(1);
+        document.querySelector("#move1").textContent = `${mv1}`;
 
-    let mv3 = pokemon.moves[2].move.name;
-    mv3 = mv3[0].toUpperCase() + mv3.slice(1);
+        document.querySelector("#move2").textContent = ``;
+        document.querySelector("#move3").textContent = ``;
+        document.querySelector("#move4").textContent = ``;
+        document.querySelector("#move5").textContent = ``;
 
-    let mv4 = pokemon.moves[3].move.name;
-    mv4 = mv4[0].toUpperCase() + mv4.slice(1);
+    } else {
+        let mv1 = pokemon.moves[0].move.name;
+        mv1 = mv1[0].toUpperCase() + mv1.slice(1);
 
-    let mv5 = pokemon.moves[4].move.name;
-    mv5 = mv5[0].toUpperCase() + mv5.slice(1);
+        let mv2 = pokemon.moves[1].move.name;
+        mv2 = mv2[0].toUpperCase() + mv2.slice(1);
 
-    document.querySelector("#move1").textContent = `${mv1}`;
-    document.querySelector("#move2").textContent = `${mv2}`;
-    document.querySelector("#move3").textContent = `${mv3}`;
-    document.querySelector("#move4").textContent = `${mv4}`;
-    document.querySelector("#move5").textContent = `${mv5}`;
+        let mv3 = pokemon.moves[2].move.name;
+        mv3 = mv3[0].toUpperCase() + mv3.slice(1);
+
+        let mv4 = pokemon.moves[3].move.name;
+        mv4 = mv4[0].toUpperCase() + mv4.slice(1);
+
+        let mv5 = pokemon.moves[4].move.name;
+        mv5 = mv5[0].toUpperCase() + mv5.slice(1);
+
+        document.querySelector("#move1").textContent = `${mv1}`;
+        document.querySelector("#move2").textContent = `${mv2}`;
+        document.querySelector("#move3").textContent = `${mv3}`;
+        document.querySelector("#move4").textContent = `${mv4}`;
+        document.querySelector("#move5").textContent = `${mv5}`;
+    }
 
 
+    // let mv1 = pokemon.moves[0].move.name;
+    // mv1 = mv1[0].toUpperCase() + mv1.slice(1);
+
+    // let mv2 = pokemon.moves[1].move.name;
+    // mv2 = mv2[0].toUpperCase() + mv2.slice(1);
+
+    // let mv3 = pokemon.moves[2].move.name;
+    // mv3 = mv3[0].toUpperCase() + mv3.slice(1);
+
+    // let mv4 = pokemon.moves[3].move.name;
+    // mv4 = mv4[0].toUpperCase() + mv4.slice(1);
+
+    // let mv5 = pokemon.moves[4].move.name;
+    // mv5 = mv5[0].toUpperCase() + mv5.slice(1);
+
+    // document.querySelector("#move1").textContent = `${mv1}`;
+    // document.querySelector("#move2").textContent = `${mv2}`;
+    // document.querySelector("#move3").textContent = `${mv3}`;
+    // document.querySelector("#move4").textContent = `${mv4}`;
+    // document.querySelector("#move5").textContent = `${mv5}`;
+
+
+})
+.catch((error) => {
+    document.querySelector(".error").classList.toggle("hidden");
+    
+    let errorBlock = document.querySelector(".error p");
+    errorBlock.textContent = `Uh Oh! It looks like we ran into an issue! Try typing in the Pokemon's name again correctly, or refresh the page`;
 })
 
 form.reset();
