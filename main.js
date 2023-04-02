@@ -101,6 +101,14 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
             img.removeAttribute("alt");
         }
 
+        // Habitat
+
+        document.querySelector(".habitat h2").textContent = `Habitat`;
+        document.querySelector("#habitattext").textContent = `This Pokemons main habitat is: `
+        let area = pokemon.habitat.name;
+        area = area[0].toUpperCase() + area.slice(1);
+        document.querySelector("#actualhabitat").textContent = `${area}`;
+
     })
 
     // Stats 
@@ -187,29 +195,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
         document.querySelector("#move4").textContent = `${mv4}`;
         document.querySelector("#move5").textContent = `${mv5}`;
     }
-
-
-    // let mv1 = pokemon.moves[0].move.name;
-    // mv1 = mv1[0].toUpperCase() + mv1.slice(1);
-
-    // let mv2 = pokemon.moves[1].move.name;
-    // mv2 = mv2[0].toUpperCase() + mv2.slice(1);
-
-    // let mv3 = pokemon.moves[2].move.name;
-    // mv3 = mv3[0].toUpperCase() + mv3.slice(1);
-
-    // let mv4 = pokemon.moves[3].move.name;
-    // mv4 = mv4[0].toUpperCase() + mv4.slice(1);
-
-    // let mv5 = pokemon.moves[4].move.name;
-    // mv5 = mv5[0].toUpperCase() + mv5.slice(1);
-
-    // document.querySelector("#move1").textContent = `${mv1}`;
-    // document.querySelector("#move2").textContent = `${mv2}`;
-    // document.querySelector("#move3").textContent = `${mv3}`;
-    // document.querySelector("#move4").textContent = `${mv4}`;
-    // document.querySelector("#move5").textContent = `${mv5}`;
-
 
 })
 .catch((error) => {
