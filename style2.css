@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(233, 64, 64);
+}
+
+div {
+    background-color: rgb(228, 224, 224);
+    padding: 3px;
+    text-align: center;
+    box-shadow: 7px 5px black;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 14%;
+}
+
+div h1 {
+    font-family: "Pokemon Solid", sans-serif;
+    color: white;
+    text-shadow: 5px 3px black;
+}
+
+div p {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: large;
+    padding: 7px;
+}
