@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onyx's Pokedex </title>
+    <link rel="icon" type="image/x-icon" href="https://png.pngitem.com/pimgs/s/107-1075333_pokeball-pixel-art-png-transparent-png.png"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Onyx's Pokedex</h1>
+        <p>Welcome to my Pokedex! Here you'll find an informational guide on each individual Pokemon.</p>
+        <form class="search">
+            <input type="text" name="userinput" id="searchbar" placeholder="Type in a Pokemon's name"/>
+            <input class ="button" type="submit" value="Enter"/>
+        </form>
+    </header>
+
+    <main class="hidden">
+        <div id="div1">
+
+        <div class="pokemondescription">
+            <p id="name"></p>
+            <p>
+                <span id="type1"></span>
+                <span id="type2"></span>
+            </p>
+            <img>
+            <p>
+                <span id="height"></span>
+                <span id="weight"></span>
+            </p>
+            <p id="description"></p>
+        </div>
+
+        <div class="stats">
+            <h2></h2>
+            <p id="hp"></p>
+            <p id="attack"></p>
+            <p id="defense"></p>
+            <p id="specialattack"></p>
+            <p id="specialdefense"></p>
+            <p id="speed"></p>
+        </div>
+
+        <div class="evolvesfrom">
+            <h2></h2>
+            <img>
+            <p></p>
+        </div>
+
+        <div class="abilities">
+            <h2></h2>
+            <p id="ability1"></p>
+            <p id="ability2"></p>
+        </div>
+
+        <div class="moves">
+            <h2></h2>
+            <p id="move1"></p>
+            <p id="move2"></p>
+            <p id="move3"></p>
+            <p id="move4"></p>
+            <p id="move5"></p>
+        </div>
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
