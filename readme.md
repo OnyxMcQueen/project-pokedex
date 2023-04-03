@@ -4,7 +4,7 @@ Pokemon served as a major cornerstone for my childhood growing up, I vividly rec
 
 The purpose of this website was for me to pay a tribute to something that I have held dear to me since I was a young child. A homage of some sort, I want this website to act as a guide to those who have no previous knowledge on Pokemon, I hope you enjoy and even gain an appreciation for Pokemon just like I had several years ago.
 
->Link to website here: 
+>Link to website here: https://onyxmcqueen.github.io/project-pokedex/
 
 <p align=center> 
 
